@@ -6,13 +6,13 @@ part of 'obj.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-CacheObj _$CacheObjFromJson(Map json) {
+CacheObj _$CacheObjFromJson(Map<String, dynamic> json) {
   return CacheObj(
     json['key'] as String?,
-    (json['content'] as List?)?.map((e) => e as int)?.toList(),
+    (json['content'] as List<dynamic>?)?.map((e) => e as int).toList(),
     subKey: json['subKey'] as String?,
     statusCode: json['statusCode'] as int?,
-    headers: (json['headers'] as List?)?.map((e) => e as int)?.toList(),
+    headers: (json['headers'] as List<dynamic>?)?.map((e) => e as int).toList(),
   )
     ..maxAgeDate = json['max_age_date'] as int?
     ..maxStaleDate = json['max_stale_date'] as int?;
